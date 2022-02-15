@@ -1,16 +1,5 @@
 import random
 
-'''
-WHAT'S NEEDED:
-1. set up containers [DONE]
-2. randomize balls [DONE]
-    # of balls = colours*(containers-1)
--------
-3. have win condition
-4. be able to move balls b/w containers
-'''
-
-
 class container:
     def __init__(self, object, balls):
         self.object = object
@@ -55,42 +44,4 @@ def placement(containerNo, ballList):  # place balls in containers [start of gam
         contain = container(containerNo, balls)
         del ballList[0:containerNo - 1]
         ct.append(contain)
-
     return ct
-
-
-def main():
-    colours = ["red", "blue", "yellow", "green", "orange"]
-    containerNo = len(colours)
-    '''
-    # !!!TESTS!!!
-
-    colourList = colour(colours, containerNo)
-    print(colourList)
-
-    # print()# end colour test
-
-    ballList = balls(colourList)
-    #print(ballList)
-
-    # print()# end balls test
-
-    containers = placement(containerNo, ballList)
-    # print(containers, "\n")
-
-    for i in containers:
-        print("this container has balls with the colours: ")
-        for j in i.balls:
-            print(j.colour)
-        print()
-    '''
-
-    # print()  # end placement test
-
-
-main()
-
-
-
-
-
